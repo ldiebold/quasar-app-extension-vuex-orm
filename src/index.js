@@ -22,7 +22,7 @@ module.exports = function (api) {
     const result = render(modelTemplate, { modelPascal, modelTable })
     
     if(!fs.existsSync(dir)) {
-      fs.mkdir(dir)
+      fs.mkdirSync(dir)
     }
     fs.writeFileSync(file, result)
   })
