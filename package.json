@@ -1,0 +1,22 @@
+{
+  "name": "quasar-app-extension-vuex-orm",
+  "version": "0.0.1",
+  "description": "Streamline integrating VuexORM with Quasar",
+  "author": "luke@quasarcast.com",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldiebold/quasar-app-extension-vuex-orm"
+  },
+  "bugs": "https://github.com/ldiebold/quasar-app-extension-vuex-orm/issues",
+  "homepage": "https://github.com/ldiebold/quasar-app-extension-vuex-orm",
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  }
+}
