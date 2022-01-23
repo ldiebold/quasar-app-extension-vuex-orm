@@ -1,4 +1,4 @@
-Quasar App Extension For (VuexORM)[https://vuex-orm.org/]
+Quasar App Extension For [VuexORM](https://vuex-orm.org/)
 
 > Streamline integrating VuexORM with Quasar!
 
@@ -22,7 +22,7 @@ import QuasarVuexOrmPlugin from './QuasarVuexOrmPlugin'
 
 export default store(function () {
   const Store = createStore({
-    plugins: [QuasarVuexOrmPlugin()],
+    plugins: [QuasarVuexOrmPlugin()),
             /*🤿^^^^^^^^^^^^^^^^^^^^*/
     strict: process.env.DEBUGGING
   })
@@ -40,10 +40,10 @@ quasar run vuex-orm new:model Todo
 > You may want to turn the above command into an alias 😉
 
 Note that this model is automatically registered for you. In other words **it does NOT need to be manually registered into the vuex-orm database**...
-Open (vue dev tools)[https://devtools.vuejs.org/] and take a look!
+Open [vue dev tools](https://devtools.vuejs.org/) and take a look!
 
 # Want to learn VuexORM?
-If you'd like to learn VuexORM, (checkout the amazing VuexORM docs)[https://vuex-orm.org/], or (this YouTube series)[https://youtube.com/playlist?list=PLFZAa7EupbB5-MLdEuVP8jXW2WADpvI39].
+If you'd like to learn VuexORM, [checkout the amazing VuexORM docs](https://vuex-orm.org/), or [this YouTube series](https://youtube.com/playlist?list=PLFZAa7EupbB5-MLdEuVP8jXW2WADpvI39).
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
