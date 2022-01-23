@@ -42,6 +42,24 @@ quasar run vuex-orm new:model Todo
 Note that this model is automatically registered for you. In other words **it does NOT need to be manually registered into the vuex-orm database**...
 Open [vue dev tools](https://devtools.vuejs.org/) and take a look!
 
+# IDE Support
+You almost certainly want to add the `models` alias to your paths in `jsconfig.json`:
+```json
+{
+  "compilerOptions": {
+    ...
+    "paths": {
+      ...
+      "models/*": [
+        "src/models/*"
+      ]
+      ...
+    }
+  },
+  ...
+}
+```
+
 # Want to learn VuexORM?
 If you'd like to learn VuexORM, [checkout the amazing VuexORM docs](https://vuex-orm.org/), or [this YouTube series](https://youtube.com/playlist?list=PLFZAa7EupbB5-MLdEuVP8jXW2WADpvI39).
 
