@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-vuex-orm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Streamline integrating VuexORM with Quasar",
   "author": "luke@quasarcast.com",
   "license": "MIT",
