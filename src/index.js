@@ -1,8 +1,3 @@
-const fs = require('fs')
-const { render } = require('template-file')
-const { pascalCase, snakeCase } = require('change-case')
-const pluralize = require('pluralize')
-
 module.exports = function (api) {
   api.compatibleWith('quasar', '^2.0.0')
   api.compatibleWith('@quasar/app', '^3.0.0')
@@ -13,6 +8,11 @@ module.exports = function (api) {
   })
 
   api.registerCommand('new:model', ({ args, params }) => {
+    var fs = require('fs')
+    var { render } = require('template-file')
+    var { pascalCase, snakeCase } = require('change-case')
+    var pluralize = require('pluralize')
+
     const modelPascal = pascalCase(args[0])
     const modelTable = pluralize(snakeCase(args[0]))
 

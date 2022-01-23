@@ -1,30 +1,49 @@
-Quasar App Extension vuex-orm
-===
+Quasar App Extension For (VuexORM)[https://vuex-orm.org/]
 
-_Be sure to change this readme as appropriate for your app extension._
+> Streamline integrating VuexORM with Quasar!
 
-_Think about the organization of this file and how the information will be beneficial to the user._
-
-> Add a short description of your App Extension. What does it do? How is it beneficial? Why would someone want to use it?
-
-Streamline integrating VuexORM with Quasar
+# Features
+- Auto import and register models!
+- Easily create new models using Quasar's cli
+- `models` aliases already registered for you
 
 # Install
 ```bash
 quasar ext add vuex-orm
 ```
-Quasar CLI will retrieve it from the NPM registry and install the extension to your project.
+Notice you now have a `src/models` directory and an "auto import" function at `src/store/QuasarVuexOrmPlugin.js`
 
-# Uninstall
-```bash
-quasar ext remove vuex-orm
+Jump into `src/store/index.js` and use the plugin:
+```js
+import { store } from 'quasar/wrappers'
+import { createStore } from 'vuex'
+import QuasarVuexOrmPlugin from './QuasarVuexOrmPlugin'
+                               /*🤿^^^^^^^^^^^^^^^^^^^^*/
+
+export default store(function () {
+  const Store = createStore({
+    plugins: [QuasarVuexOrmPlugin()],
+            /*🤿^^^^^^^^^^^^^^^^^^^^*/
+    strict: process.env.DEBUGGING
+  })
+
+  return Store
+})
 ```
 
-# Info
-> Add longer information here that will help the user of your app extension.
+# Create your first model
+Creating models is easy! Quasar VuexORM registers a `new:model` command. Check it out...
 
-# Other Info
-> Add other information that's not as important to know
+```sh
+quasar run vuex-orm new:model Todo
+```
+> You may want to turn the above command into an alias 😉
+
+Note that this model is automatically registered for you. In other words **it does NOT need to be manually registered into the vuex-orm database**...
+Open (vue dev tools)[https://devtools.vuejs.org/] and take a look!
+
+# Want to learn VuexORM?
+If you'd like to learn VuexORM, (checkout the amazing VuexORM docs)[https://vuex-orm.org/], or (this YouTube series)[https://youtube.com/playlist?list=PLFZAa7EupbB5-MLdEuVP8jXW2WADpvI39].
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
