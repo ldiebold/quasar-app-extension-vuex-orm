@@ -16,10 +16,14 @@ module.exports = function (api) {
     const modelPascal = pascalCase(args[0])
     const modelTable = pluralize(snakeCase(args[0]))
 
-    const file = api.resolve.src('models') + '/' + modelPascal + '.js'
+    const dir = api.resolve.src('models')
+    const file = dir + '/' + modelPascal + '.js'
 
     const result = render(modelTemplate, { modelPascal, modelTable })
     
+    if(!fs.existsSync(dir)) {
+      fs.mkdir(dir)
+    }
     fs.writeFileSync(file, result)
   })
 }

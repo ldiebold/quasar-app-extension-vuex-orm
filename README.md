@@ -13,7 +13,7 @@ quasar ext add vuex-orm
 ```
 Notice you now have a `src/models` directory and an "auto import" function at `src/store/QuasarVuexOrmPlugin.js`
 
-Jump into `src/store/index.js` and use the plugin:
+Dive into `src/store/index.js` and use the plugin:
 ```js
 import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
@@ -22,7 +22,7 @@ import QuasarVuexOrmPlugin from './QuasarVuexOrmPlugin'
 
 export default store(function () {
   const Store = createStore({
-    plugins: [QuasarVuexOrmPlugin()),
+    plugins: [QuasarVuexOrmPlugin()],
             /*🤿^^^^^^^^^^^^^^^^^^^^*/
     strict: process.env.DEBUGGING
   })
