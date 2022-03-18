@@ -1,11 +1,17 @@
 module.exports = function (api) {
   api.compatibleWith('quasar', '^2.0.0')
-  api.compatibleWith('@quasar/app', '^3.0.0')
 
-  // Add webpack alias for models
-  api.chainWebpack((chain) => {
-    chain.resolve.alias.set('models', api.resolve.src('models'))
-  })
+  if (api.hasVite === true) {
+    // Add Vite alias for models
+    api.extendViteConf((viteConf) => {
+      Object.assign(viteConf.resolve.alias, { models: api.resolve.src('models') })
+    })
+  } else {
+    // Add webpack alias for models
+    api.chainWebpack((chain) => {
+      chain.resolve.alias.set('models', api.resolve.src('models'))
+    })
+  }
 
   api.registerCommand('new:model', ({ args, params }) => {
     var fs = require('fs')

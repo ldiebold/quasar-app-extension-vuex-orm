@@ -11,7 +11,9 @@ Quasar App Extension For [VuexORM](https://vuex-orm.org/)
 ```bash
 quasar ext add vuex-orm
 ```
-Notice you now have a `src/models` directory and an "auto import" function at `src/store/QuasarVuexOrmPlugin.js`
+Notice you now have
+  - A `src/models` directory (with an example `User.js` model)
+  - A Vuex Plugin that helps streamline installation: `src/store/QuasarVuexOrmPlugin.js`
 
 Dive into `src/store/index.js` and use the plugin:
 ```js
